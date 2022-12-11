@@ -6,40 +6,24 @@ const subtract = function(a, b) {
 	return (a - b);
 };
 
-const sum = function(tnArray) {
-  const Res = tnArray.reduce((total, number) => {
-    if (typeof(number) === 'number') {
-      total += number;
-    }
-
-    return total;
-  }, 0);
-
-  return Res;
+const sum = function(array) {
+  return array.reduce((total, number) => (total + number), 0);
 };
 
-const multiply = function(tnArray) {
-  const Res = tnArray.reduce((total, number) => {
-    if (typeof(number) === 'number') {
-      total *= number;
-    }
-
-    return total;
-  }, 1);
-
-  return Res;
+const multiply = function(array) {
+  return array.length ? array.reduce((total, number) => (total * number)) : 0;
 };
 
 const power = function(a, b) {
   return (a**b);	
 };
 
-const factorial = function(a) {
-  if (a > 0) {
-    return (a * factorial(a - 1))
+const factorial = function(n) {
+  if (n === 0) {
+    return 1;
   }
   else {
-    return 1;
+    return (n * factorial(n - 1))
   }
 };
 
