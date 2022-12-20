@@ -1,7 +1,17 @@
-const convertToCelsius = function() {
+const convertToCelsius = function(degF) {
+  if (typeof(degF) !== 'number') {
+    return 'ERROR';
+  }
+
+  return Math.round(((degF - 32) * 5 / 9) * 10) / 10;
 };
 
-const convertToFahrenheit = function() {
+const convertToFahrenheit = function(degC) {
+  if (typeof(degC) !== 'number') {
+    return 'ERROR';
+  }
+
+  return Math.round(((degC * 9 / 5) + 32) * 10) / 10;
 };
 
 // Do not edit below this line
